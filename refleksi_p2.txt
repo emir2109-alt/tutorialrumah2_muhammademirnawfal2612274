@@ -1,0 +1,9 @@
+REFLEKSI PERTEMUAN 2 - Algoritma dan Pemrograman C
+
+1. Tegangan dan arus sebaiknya disimpan sebagai float karena nilainya sering berupa bilangan pecahan, misalnya 0,5 A atau 3,3 V. Tipe int membuang bagian desimal, sehingga arus 0,5 A akan tersimpan sebagai 0. Akibatnya, perhitungan Hukum Ohm (V = I x R) menjadi salah, misalnya daya P = V x I bernilai 0 padahal seharusnya 110 W.
+
+2. Jika tanda & terlewat, scanf() menerima nilai variabel (isi yang belum diinisialisasi) sebagai alamat tujuan, bukan alamat variabel. Nilai input akan ditulis ke alamat memori yang tidak jelas. Hal ini berbahaya karena dapat merusak data lain, menyebabkan program crash (segmentation fault), atau berperilaku tidak terduga.
+
+3. Hasil sizeof() bisa berbeda karena ukuran tipe data ditentukan oleh kompiler, arsitektur prosesor (misalnya 32-bit atau 64-bit), dan sistem operasi. Standar C hanya menetapkan ukuran minimum dan urutan relatif antartipe, bukan ukuran pasti. Contohnya, int bisa 2 byte pada mikrokontroler lama tetapi 4 byte pada laptop modern.
+
+4. Kebiasaan yang paling membantu adalah memberi nama variabel yang deskriptif, misalnya tegangan dan arus, bukan a dan b. Dengan begitu, maksud kode bisa langsung dipahami tanpa banyak komentar. Hal ini juga memudahkan pembacaan ulang, pencarian kesalahan, dan kerja sama dengan orang lain.
